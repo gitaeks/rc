@@ -15,6 +15,11 @@ $('#myModal').on('shown.rc.modal', function () {
 ### 예제
 #### 정적 예제(Static example)
 
+<div style="background-image:url('http://coenraets.org/blog/wp-content/uploads/2013/06/iphone5.png');background-repeat:no-repeat;margin: 0px 0px 0px 0px;padding: 145px 0px 0px 27px;width:375px;height:690px;">
+<iframe src="http://coenraets.org/apps/directory-backbone-ratchet" width="320" height="550"></iframe>
+</div>
+
+
 <br><br>
 ## 페이지 전환 (Page Transitions) page.js
 #### 페이지 전환 이란
