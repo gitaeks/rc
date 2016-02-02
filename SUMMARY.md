@@ -1,4 +1,4 @@
 # Summary
 
-* [javascript](javascript.md)
+* javascript
 
