@@ -1728,6 +1728,8 @@ code {
 
 /*device preview*/
 
-.bar .btn-link {
+.ratchet-body a,
+.ratchet-body a:hover,
+.ratchet-body .btn-link {
   text-decoration: none;
 }

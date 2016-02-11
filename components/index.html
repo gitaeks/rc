@@ -195,22 +195,108 @@
                                 
                             </artile>
 
+                            <artile class="component">
+                                <h1 id="bars" class="page-header">
+                                    <a class="header" href="#bars"></a>Bars
+                                </h1>
+                            </artile>
+                            <artile class="component">
+                                <h2 id="bars-tab" class="page-header">
+                                    <a class="header" href="#bars-tab"></a>Tab bar
+                                </h2>
+                                <p>Use Ratchicons in the <code>.tab-bar</code> to represent different sections of your app.</p>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;bar bar-tab&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item active&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-home&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;tab-label&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-person&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;tab-label&quot;</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-star-filled&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;tab-label&quot;</span><span class="nt">&gt;</span>Favorites<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-search&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;tab-label&quot;</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-gear&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;tab-label&quot;</span><span class="nt">&gt;</span>Settings<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div>
+                                <p class="component-note touch-only"><strong>Note:</strong> Use push.js to actually change content.</p>
+                            </artile>
+
+                            <artile class="component">
+                                <h1 id="bars-tab-labels" class="page-header">
+                                    <a class="header" href="#bars-tab-labels"></a>Tab bar (labels only)
+                                </h1>
+                                <p>If you don't want to use icons, that's okay too. The text will appear larger to use the additional space.</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;bar bar-tab&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item active&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+    Label
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+    Label
+  <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+    Label
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div>
+
+                                <p class="component-note touch-only"><strong>Note:</strong> Use push.js to actually change content.</p>
+                            </artile>
+
+                            <artile class="component">
+                                <h1 id="bars-standard" class="page-header">
+                                    <a class="header" href="#bars-standard"></a>Standard bars
+                                </h1>
+                                <p>Standard bars are basic fixed elements that can be positioned in four places. These can be used to house buttons, icons, or segmented controls (see following examples).</p>
+
+<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Segmented control in standard bar fixed to top --&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;bar bar-standard&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;segmented-control&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;control-item active&quot;</span><span class="nt">&gt;</span>Thing one<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;control-item&quot;</span><span class="nt">&gt;</span>Thing two<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;control-item&quot;</span><span class="nt">&gt;</span>Thing three<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+
+<span class="c">&lt;!-- Block button in standard bar fixed below top bar --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bar bar-standard bar-header-secondary&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-block&quot;</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Block button in standard bar fixed above the footer --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bar bar-standard bar-footer-secondary&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-block&quot;</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Icons in standard bar fixed to the bottom of the screen --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bar bar-standard bar-footer&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon-compose pull-left&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon-gear pull-right&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+
+                            </artile>
 
                         </div>
 
                         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
                     </div>
-                    <div class="device-column col-md-5">
+                    <div class="device-column col-md-5 hidden-xs hidden-sm">
                         <div class="device docs-scrollspy docs-affix">
 
                             <ul class="nav device-content">
                                 <li><div class="screen-bg"></div></li>
-                                <li>
-                                    <header class="bar bar-nav">
-                                        <h1 class="title">Title</h1>
-                                    </header>
-                                </li>
                                 <li class="ratchet-body">
                                     <a href="#navbar"></a>
                                     <header class="bar bar-nav">
@@ -279,6 +365,90 @@
                                         <h1 class="title">Title</h1>
                                     </header>
                                 </li>
+                                <li class="ratchet-body">
+                                    <a href="#bars" style="display: none"></a>
+                                    <nav class="bar bar-tab">
+                                        <a class="tab-item active" href="#">
+                                            <span class="icon icon-home"></span>
+                                            <span class="tab-label">Home</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                            <span class="icon icon-person"></span>
+                                            <span class="tab-label">Profile</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                            <span class="icon icon-star-filled"></span>
+                                            <span class="tab-label">Favorites</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                            <span class="icon icon-search"></span>
+                                            <span class="tab-label">Search</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                            <span class="icon icon-gear"></span>
+                                            <span class="tab-label">Settings</span>
+                                        </a>
+                                    </nav>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#bars-tab" style="display: none"></a>
+                                    <nav class="bar bar-tab">
+                                        <a class="tab-item active" href="#">
+                                            <span class="icon icon-home"></span>
+                                            <span class="tab-label">Home</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                            <span class="icon icon-person"></span>
+                                            <span class="tab-label">Profile</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                            <span class="icon icon-star-filled"></span>
+                                            <span class="tab-label">Favorites</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                            <span class="icon icon-search"></span>
+                                            <span class="tab-label">Search</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                            <span class="icon icon-gear"></span>
+                                            <span class="tab-label">Settings</span>
+                                        </a>
+                                    </nav>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#bars-tab-labels" style="display: none"></a>
+                                    <nav class="bar bar-tab">
+                                        <a class="tab-item active" href="#">
+                                            Label
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                            Label
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                            Label
+                                        </a>
+                                    </nav>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#bars-standard" style="display: none"></a>
+                                    <nav class="bar bar-standard">
+                                        <div class="segmented-control">
+                                            <a class="control-item active">Thing one</a>
+                                            <a class="control-item">Thing two</a>
+                                            <a class="control-item">Thing three</a>
+                                        </div>
+                                    </nav>
+                                    <div class="bar bar-standard bar-header-secondary">
+                                        <button class="btn btn-block">Block level button</button>
+                                    </div>
+                                    <div class="bar bar-standard bar-footer-secondary">
+                                        <button class="btn btn-block">Block level button</button>
+                                    </div>
+                                    <div class="bar bar-standard bar-footer">
+                                        <a class="icon icon-compose pull-left"></a>
+                                        <a class="icon icon-gear pull-right"></a>
+                                    </div>
+                                </li>
                             </ul>
 
                         </div>
@@ -336,7 +506,19 @@
                             </ul> 
                         </li>
                         <li> 
-                            <a href="#footer">Drawer</a> 
+                            <a href="#popover">popover</a> 
+                        </li>
+                        <li> 
+                            <a href="#popover">popup</a> 
+                        </li>
+                        <li> 
+                            <a href="#popover">Action Sheet</a> 
+                        </li>
+                        <li> 
+                            <a href="#dropdown">Dropdown</a> 
+                        </li>
+                        <li> 
+                            <a href="#drawer">Drawer</a> 
                         </li>
                     </ul> 
                         <a class="back-to-top" href="#top"> Back to top </a> <a href="#" class="bs-docs-theme-toggle" role="button">Disable theme preview</a> 
