@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ratchet Plus</title>
+    <meta name="description" content="Ratchet: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="author" content="Connor Sears">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <link rel="icon" href="../favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Google Web Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700%7COpen+Sans:400,300">
+
+    <link rel="stylesheet" href="/rc/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/rc/dist/css/ratchet.css">
+    <link rel="stylesheet" href="/rc/dist/css/ratchet-plus.css">
+    <link rel="stylesheet" href="/rc/assets/css/docs.css">
+    <link rel="stylesheet" href="/rc/assets/css/pygments-manni.css">
+
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/rc/assets/img/apple-touch-icon-114x114.png">
+
+</head>
+
+
+<body>
+
+    <header class="navbar navbar-static-top bs-docs-nav" id="top">
+      <div class="container">
+
+       <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Ratchet Plus</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/rc/">Home</a></li>
+            <li><a href="/rc/getting-started">Getting started</a></li>
+            <li class="active"><a href="/rc/css">CSS</a></li>
+            <li><a href="/rc/components">Components</a></li>
+            <li><a href="/rc/javascript">Javascript</a></li>
+            <li><a href="https://github.com/kimsq/rc" target="_blank">GitHub project</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </header>
+
+    <div class="bs-docs-header" id="content" tabindex="-1"> 
+        <div class="container"> 
+            <h1>CSS</h1> 
+            <p class="lead">Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p> 
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+
+        <div class="row">
+            <div class="col-md-10 col-md-push-2" role="main">
+
+                <div class="row">
+                    <div class="content-column col-md-7">
+                        <artile class="component">
+                            <h2 id="navbar-default" class="page-header">
+                                <a class="header" href="#navbar-default"></a>Overview
+                            </h2>
+                            <p>Get the lowdown on the key pieces of Ratchet Plus's infrastructure, including our approach to better, faster, stronger mobile web development.</p>
+
+
+                        </artile>
+
+
+
+
+
+                    </div>
+                    <div class="device-column col-md-5">
+                        <div class="device docs-scrollspy docs-affix">
+
+                            <ul class="nav device-content">
+
+                                <li class="ratchet-body">
+                                    <a href="#dropdowns" style="display: none"></a>
+                                    <header class="bar bar-nav">
+                                        <button class="btn btn-link btn-nav pull-left">
+                                        <span class="icon icon-left-nav"></span>
+                                        Left
+                                        </button>
+                                        <button class="btn btn-link btn-nav pull-right">
+                                        Right
+                                        <span class="icon icon-right-nav"></span>
+                                        </button>
+                                        <h1 class="title">Title</h1>
+                                    </header>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#btn-groups" style="display: none"></a>
+                                    <header class="bar bar-nav">
+                                        <button class="btn pull-left">
+                                            Left
+                                        </button>
+                                        <button class="btn pull-right">
+                                            Right
+                                        </button>
+                                        <div class="segmented-control">
+                                            <a class="control-item active">One</a>
+                                            <a class="control-item">Two</a>
+                                            <a class="control-item">Three</a>
+                                        </div>
+                                    </header>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#btn-groups-single" style="display: none"></a>
+                                    <nav class="bar bar-tab">
+                                        <a class="tab-item active" href="#">
+                                        <span class="icon icon-home"></span>
+                                        <span class="tab-label">Home</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                        <span class="icon icon-person"></span>
+                                        <span class="tab-label">Profile</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                        <span class="icon icon-star-filled"></span>
+                                        <span class="tab-label">Favorites</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                        <span class="icon icon-search"></span>
+                                        <span class="tab-label">Search</span>
+                                        </a>
+                                        <a class="tab-item" href="#">
+                                        <span class="icon icon-gear"></span>
+                                        <span class="tab-label">Settings</span>
+                                        </a>
+                                    </nav>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#btn-groups-toolbar" style="display: none"></a>
+
+                                    <nav class="bar bar-standard">
+                                      <div class="segmented-control">
+                                        <a class="control-item active">Thing one</a>
+                                        <a class="control-item">Thing two</a>
+                                        <a class="control-item">Thing three</a>
+                                      </div>
+                                    </nav>
+
+                                    <!-- Block button in standard bar fixed below top bar -->
+                                    <div class="bar bar-standard bar-header-secondary">
+                                      <button class="btn btn-block">Block level button</button>
+                                    </div>
+
+                                    <!-- Block button in standard bar fixed above the footer -->
+                                    <div class="bar bar-standard bar-footer-secondary">
+                                      <button class="btn btn-block">Block level button</button>
+                                    </div>
+
+                                    <!-- Icons in standard bar fixed to the bottom of the screen -->
+                                    <div class="bar bar-standard bar-footer">
+                                      <a class="icon icon-compose pull-left"></a>
+                                      <a class="icon icon-gear pull-right"></a>
+                                    </div>
+
+
+                                </li>
+                            </ul>
+                            <div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-2 col-md-pull-10" role="aside">
+
+                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm docs-scrollspy docs-affix"> 
+
+                    <ul class="nav bs-docs-sidenav"> 
+                        <li> 
+                            <a href="#overview">Overview</a> 
+                            <ul class="nav"> <li><a href="#overview-doctype">HTML5 doctype</a></li> 
+                                <li><a href="#overview-mobile">Mobile first</a></li> 
+                                <li><a href="#overview-type-links">Typography and links</a></li> 
+                            </ul> 
+                        </li> 
+                        <li> 
+                            <a href="#grid">Grid system</a> 
+                            <ul class="nav"> 
+                                <li><a href="#grid-intro">Introduction</a></li> 
+                                <li><a href="#grid-media-queries">Media queries</a></li> 
+                                <li><a href="#grid-options">Grid options</a></li> 
+                                <li><a href="#grid-example-basic">Ex: Stacked-to-horizontal</a></li> 
+                                <li><a href="#grid-example-mixed">Ex: Mobile and desktop</a></li> 
+                                <li><a href="#grid-example-mixed-complete">Ex: Mobile, tablet, desktop</a></li> 
+                                <li><a href="#grid-example-wrapping">Ex: Column wrapping</a></li> 
+                                <li><a href="#grid-responsive-resets">Responsive column resets</a></li> 
+                                <li><a href="#grid-offsetting">Offsetting columns</a></li> 
+                                <li><a href="#grid-nesting">Nesting columns</a></li> 
+                                <li><a href="#grid-column-ordering">Column ordering</a></li> 
+                                <li><a href="#grid-less">Less mixins and variables</a></li> 
+                            </ul> 
+                        </li> 
+                        <li> 
+                            <a href="#type">Typography</a> 
+                            <ul class="nav"> 
+                                <li><a href="#type-headings">Headings</a></li> 
+                                <li><a href="#type-body-copy">Body copy</a></li> 
+                                <li><a href="#type-inline-text">Inline text elements</a></li> 
+                                <li><a href="#type-alignment">Alignment classes</a></li> 
+                                <li><a href="#type-transformation">Transformation classes</a></li> 
+                                <li><a href="#type-abbreviations">Abbreviations</a></li> 
+                                <li><a href="#type-addresses">Addresses</a></li> 
+                                <li><a href="#type-blockquotes">Blockquotes</a></li> 
+                                <li><a href="#type-lists">Lists</a></li> 
+                            </ul> 
+                        </li> 
+                        <li>
+                            <a href="#code">Code</a> 
+                            <ul class="nav"> 
+                                <li><a href="#code-inline">Inline</a></li> 
+                                <li><a href="#code-user-input">User input</a></li> 
+                                <li><a href="#code-block">Basic block</a></li> 
+                                <li><a href="#code-variables">Variables</a></li> 
+                                <li><a href="#code-sample-output">Sample output</a></li> 
+                            </ul> 
+                        </li>
+                        <li> 
+                            <a href="#tables">Tables</a> 
+                            <ul class="nav"> 
+                                <li><a href="#tables-example">Basic example</a></li> 
+                                <li><a href="#tables-striped">Striped rows</a></li> 
+                                <li><a href="#tables-bordered">Bordered table</a></li> 
+                                <li><a href="#tables-hover-rows">Hover rows</a></li> 
+                                <li><a href="#tables-condensed">Condensed table</a></li> 
+                                <li><a href="#tables-contextual-classes">Contextual classes</a></li> 
+                                <li><a href="#tables-responsive">Responsive tables</a></li> 
+                            </ul> 
+                        </li>
+                        <li> 
+                            <a href="#forms">Forms</a> 
+                            <ul class="nav"> 
+                                <li><a href="#forms-example">Basic example</a></li> 
+                                <li><a href="#forms-inline">Inline form</a></li> 
+                                <li><a href="#forms-horizontal">Horizontal form</a></li> 
+                                <li><a href="#forms-controls">Supported controls</a></li> 
+                                <li><a href="#forms-controls-static">Static control</a></li> 
+                                <li><a href="#forms-control-focus">Focus state</a></li> 
+                                <li><a href="#forms-control-disabled">Disabled state</a></li> 
+                                <li><a href="#forms-control-readonly">Readonly state</a></li> 
+                                <li><a href="#forms-help-text">Help text</a></li> 
+                                <li><a href="#forms-control-validation">Validation states</a></li> 
+                                <li><a href="#forms-control-sizes">Control sizing</a></li> 
+                            </ul> 
+                        </li> 
+                        <li> 
+                            <a href="#buttons">Buttons</a> 
+                            <ul class="nav"> 
+                                <li><a href="#buttons-tags">Button tags</a></li> 
+                                <li><a href="#buttons-options">Options</a></li> 
+                                <li><a href="#buttons-sizes">Sizes</a></li> 
+                                <li><a href="#buttons-active">Active state</a></li> 
+                                <li><a href="#buttons-disabled">Disabled state</a></li> 
+                            </ul> 
+                        </li> 
+                        <li> 
+                            <a href="#images">Images</a> 
+                            <ul class="nav"> 
+                                <li><a href="#images-responsive">Responsive images</a></li> 
+                                <li><a href="#images-shapes">Image shapes</a></li> 
+                            </ul> 
+                        </li> 
+                        <li> 
+                            <a href="#helper-classes">Helper classes</a> 
+                            <ul class="nav"> 
+                                <li><a href="#helper-classes-colors">Contextual colors</a></li> 
+                                <li><a href="#helper-classes-backgrounds">Contextual backgrounds</a></li> 
+                                <li><a href="#helper-classes-close">Close icon</a></li> 
+                                <li><a href="#helper-classes-carets">Carets</a></li> 
+                                <li><a href="#helper-classes-floats">Quick floats</a></li> 
+                                <li><a href="#helper-classes-center">Center content blocks</a></li> 
+                                <li><a href="#helper-classes-clearfix">Clearfix</a></li> 
+                                <li><a href="#helper-classes-show-hide">Showing and hiding content</a></li> 
+                                <li><a href="#helper-classes-screen-readers">Screen reader and keyboard navigation content</a></li> 
+                                <li><a href="#helper-classes-image-replacement">Image replacement</a></li> 
+                            </ul> 
+                        </li> 
+                        <li> 
+                            <a href="#responsive-utilities">Responsive utilities</a> 
+                            <ul class="nav"> 
+                                <li><a href="#responsive-utilities-classes">Available classes</a></li> 
+                                <li><a href="#responsive-utilities-print">Print classes</a></li> 
+                                <li><a href="#responsive-utilities-tests">Test cases</a></li> 
+                            </ul> 
+                        </li> 
+                    </ul> 
+                        <a class="back-to-top" href="#top"> Back to top </a> <a href="#" class="bs-docs-theme-toggle" role="button">Disable theme preview</a> 
+                </nav>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <footer class="bs-docs-footer" role="contentinfo"> 
+        <div class="container"> 
+            <ul class="bs-docs-footer-links"> 
+                <li><a href="https://github.com/kimsq/rc">GitHub</a></li> 
+                <li><a href="https://twitter.com/kimsqcom">Twitter</a></li> 
+                <li><a href="../getting-started/#examples">Examples</a></li> 
+                <li><a href="../about/">About</a></li> 
+            </ul> 
+            <p><a href="http://kimsq.github.io/rc/" target="_blank">Ratchet Plus</a> is a project maintained by <a href="https://github.com/gitaeks" target="_blank">@gitaeks</a> and <a href="https://github.com/kieregh" target="_blank">@kiere</a>  at <a href="http://kimsq.com" target="_blank">Redblock inc.</a>.</p>
+
+            <p>Code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p> 
+            <p> Based on <a href="http://goratchet.com/">Ratchet</a> and <a href="http://getbootstrap.com/">Bootstrap</a></p> 
+        </div> 
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/rc/assets/js/bootstrap.min.js"></script>
+    <script src="/rc/assets/js/docs.js"></script>
+
+</body>
+</html>
