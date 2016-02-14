@@ -22,6 +22,8 @@
 
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/rc/assets/img/apple-touch-icon-114x114.png">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <script type="text/javascript">window.liveSettings={api_key:"86aee22586d7465790bc844b6b1bd021"}</script>
     <script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
 
@@ -49,10 +51,10 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/rc/">Home</a></li>
             <li><a href="/rc/getting-started">Getting started</a></li>
-            <li><a href="/rc/css">CSS</a></li>
+            <li><a href="/rc/layout">Layout</a></li>
+            <li><a href="/rc/content">Content</a></li>
             <li class="active"><a href="/rc/components">Components</a></li>
-            <li><a href="/rc/javascript">Javascript</a></li>
-            <li><a href="https://github.com/kimsq/rc" target="_blank">GitHub project</a></li>
+            <li><a href="/rc/examples">Examples</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -71,223 +73,476 @@
             <div class="col-md-10 col-md-push-2" role="main">
 
                 <div class="row">
-                    <div class="content-column col-md-7">
+                    <div class="content-column col-md-7 docs-scrollspy">
 
-                        <div class="docs-section" style="padding-top:0">
+                        <ul class="nav nav-pills nav-stacked">
 
+                          <li class="component">
+                            <a href="#navbar"></a>
                             <h1 id="navbar" class="page-header">
-                                <a class="header" href="#navbar"></a>Navbar
+                              Navbar
                             </h1>
                             <p class="lead">
-                                Title bars are full width and docked to the top of the viewport.
+                              Title bars are full width and docked to the top of the viewport.
                             </p>
+                          </li>
 
-
-                            <artile class="component">
+                            <li class="component">
+                                <a href="#navbar-default"></a>
                                 <h2 id="navbar-default" class="page-header">
-                                    <a class="header" href="#navbar-default"></a>Default navbar 
+                                    Default navbar 
                                 </h2>
                                 <p>Title bars are full width and docked to the top of the viewport.</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">&quot;bar bar-nav&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;/header&gt;</span>
-</code></pre></div>
-
-                            </artile>
+                                <script src="https://gist.github.com/redblock/9aa11cccc86c41852c24.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-default.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
 
-                            <artile class="component">
+                            <li class="component">
+                                <a href="#navbar-buttons"></a>
                                 <h2 id="navbar-buttons" class="page-header">
-                                    <a class="header" href="#navbar-buttons"></a>Navbar with buttons
+                                    Navbar with buttons
                                 </h2>
                                 <p>Buttons in a title bar are left or right aligned and should be used for actions. Use the <code>.pull-right</code> or <code>.pull-left</code> utility classes to float the buttons. Also, be sure to place any floated elements before the title.</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">&quot;bar bar-nav&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn pull-left&quot;</span><span class="nt">&gt;</span>
-    Left
-  <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn pull-right&quot;</span><span class="nt">&gt;</span>
-    Right
-  <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;/header&gt;</span>
-</code></pre></div>
+                                <script src="https://gist.github.com/redblock/5baa0e9339446d429ebe.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
 
-                            </artile>
-
-
-                            <artile class="component">
+                            <li class="component">
+                                <a href="#navbar-icons"></a>
                                 <h2 id="navbar-icons" class="page-header">
-                                    <a class="header" href="#navbar-icons"></a>Navbar with icons
+                                    Navbar with icons
                                 </h2>
                                 <p>Icons can also be used for actions in toolbars. Again, be sure to use utility classes to float the icons into position.</p>
+                                <script src="https://gist.github.com/redblock/778af352ca171f2c9493.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">&quot;bar bar-nav&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon-left-nav pull-left&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon-compose pull-right&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
-  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;/header&gt;</span>
-</code></pre></div>
-                                
-                            </artile>
-
-
-                            <artile class="component">
+                            <li class="component">
+                                <a href="#navbar-links-icons"></a>
                                 <h2 id="navbar-links-icons" class="page-header">
-                                    <a class="header" href="#navbar-icons"></a>Navbar with link buttons and icons
+                                    Navbar with link buttons and icons
                                 </h2>
                                 <p>Link buttons can be used in tool bars to remove the outline. Use these in conjuction with icons to recreate the nav feel from iOS7. Note the use of <code>.btn-nav</code> to bring the buttons a little bit closer to the edge of the viewport.</p>
+                                <script src="https://gist.github.com/gitaeks/2645c5519a9626102d24.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">&quot;bar bar-nav&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-link btn-nav pull-left&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-left-nav&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    Left
-  <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-link btn-nav pull-right&quot;</span><span class="nt">&gt;</span>
-    Right
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-right-nav&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;/header&gt;</span>
-</code></pre></div>
-                                
-                            </artile>
-
-                            <artile class="component">
+                            <li class="component">
+                                <a href="#navbar-segmented-control"></a>
                                 <h2 id="navbar-segmented-control" class="page-header">
-                                    <a class="header" href="#navbar-segmented-control"></a>Navbar with segmented control
+                                    Navbar with segmented control
                                 </h2>
                                 <p>Navbar bars can also house segmented controls. Feel free to add accompanying buttons too. The control will automatically layout itself out correctly.</p>
+                                <script src="https://gist.github.com/gitaeks/20187f9c266bedab6a72.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">&quot;bar bar-nav&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn pull-left&quot;</span><span class="nt">&gt;</span>
-    Left
-  <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn pull-right&quot;</span><span class="nt">&gt;</span>
-    Right
-  <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;segmented-control&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;control-item active&quot;</span><span class="nt">&gt;</span>One<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;control-item&quot;</span><span class="nt">&gt;</span>Two<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;control-item&quot;</span><span class="nt">&gt;</span>Three<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/header&gt;</span>
-</code></pre></div>
-                                
-                            </artile>
-
-                            <artile class="component">
+                            <li class="component">
+                                <a href="#navbar-inverted"></a>
                                 <h2 id="navbar-inverted" class="page-header">
-                                    <a class="header" href="#navbar-inverted"></a>Inverted navbar
+                                    Inverted navbar
                                 </h2>
                                 <p>Modify the look of the navbar by adding <code>.navbar-inverse</code>.</p>
+                                <script src="https://gist.github.com/gitaeks/40aa36e3423fc3dfbf96.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">&quot;bar bar-nav bar-nav-inverse&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;/header&gt;</span>
-</code></pre></div>
-                                
-                            </artile>
-
-                            <artile class="component">
+                            <li class="component">
+                                <a href="#bars"></a>
                                 <h1 id="bars" class="page-header">
-                                    <a class="header" href="#bars"></a>Bars
+                                    Bars
                                 </h1>
-                            </artile>
-                            <artile class="component">
+                            </li>
+                            <li class="component">
+                                <a href="#bars-tab"></a>
                                 <h2 id="bars-tab" class="page-header">
-                                    <a class="header" href="#bars-tab"></a>Tab bar
+                                    Tab bar
                                 </h2>
                                 <p>Use Ratchicons in the <code>.tab-bar</code> to represent different sections of your app.</p>
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;bar bar-tab&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item active&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-home&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;tab-label&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-person&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;tab-label&quot;</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-star-filled&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;tab-label&quot;</span><span class="nt">&gt;</span>Favorites<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-search&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;tab-label&quot;</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-gear&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;tab-label&quot;</span><span class="nt">&gt;</span>Settings<span class="nt">&lt;/span&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/nav&gt;</span>
-</code></pre></div>
+                                <script src="https://gist.github.com/gitaeks/5287c267c00d50ff1c6d.js"></script>
                                 <p class="component-note touch-only"><strong>Note:</strong> Use push.js to actually change content.</p>
-                            </artile>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
-                            <artile class="component">
-                                <h1 id="bars-tab-labels" class="page-header">
-                                    <a class="header" href="#bars-tab-labels"></a>Tab bar (labels only)
-                                </h1>
+                            <li class="component">
+                                <a href="#bars-tab-labels"></a>
+                                <h2 id="bars-tab-labels" class="page-header">
+                                    Tab bar (labels only)
+                                </h2>
                                 <p>If you don't want to use icons, that's okay too. The text will appear larger to use the additional space.</p>
-
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;bar bar-tab&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item active&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-    Label
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-    Label
-  <span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;tab-item&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
-    Label
-  <span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/nav&gt;</span>
-</code></pre></div>
-
+                                <script src="https://gist.github.com/gitaeks/1492d59a1b700bbdc5d3.js"></script>
                                 <p class="component-note touch-only"><strong>Note:</strong> Use push.js to actually change content.</p>
-                            </artile>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
-                            <artile class="component">
-                                <h1 id="bars-standard" class="page-header">
-                                    <a class="header" href="#bars-standard"></a>Standard bars
-                                </h1>
+                            <li class="component">
+                                <a href="#bars-standard"></a>
+                                <h2 id="bars-standard" class="page-header">
+                                    Standard bars
+                                </h2>
                                 <p>Standard bars are basic fixed elements that can be positioned in four places. These can be used to house buttons, icons, or segmented controls (see following examples).</p>
+                                <script src="https://gist.github.com/gitaeks/c8694ab2af65a51cf8a8.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
-<div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Segmented control in standard bar fixed to top --&gt;</span>
-<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;bar bar-standard&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;segmented-control&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;control-item active&quot;</span><span class="nt">&gt;</span>Thing one<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;control-item&quot;</span><span class="nt">&gt;</span>Thing two<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;control-item&quot;</span><span class="nt">&gt;</span>Thing three<span class="nt">&lt;/a&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/nav&gt;</span>
 
-<span class="c">&lt;!-- Block button in standard bar fixed below top bar --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bar bar-standard bar-header-secondary&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-block&quot;</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+                            <li class="component">
+                                <a href="#table-views"></a>
+                                <h1 id="table-views" class="page-header">
+                                    Table views
+                                </h1>
+                            </li>
 
-<span class="c">&lt;!-- Block button in standard bar fixed above the footer --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bar bar-standard bar-footer-secondary&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-block&quot;</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+                            <li class="component">
+                                <a href="#table-views-basic"></a>
+                                <h2 id="table-views-basic" class="page-header">
+                                    Basic example
+                                </h2>
+                                <p>Table views can be used for organizing data, showing collections of links, or a series of controls.</p>
+                                <script src="https://gist.github.com/gitaeks/a35b918a7b576dc0ac77.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
-<span class="c">&lt;!-- Icons in standard bar fixed to the bottom of the screen --&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bar bar-standard bar-footer&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon-compose pull-left&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
-  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;icon icon-gear pull-right&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
+                            <li class="component">
+                                <a href="#table-views-chevrons"></a>
+                                <h2 id="table-views-chevrons" class="page-header">
+                                    Table view with chevrons
+                                </h2>
+                                <p>Chevrons should be used to indicate that the item is linked. Just apply the classes <code>.navigate-right</code> or <code>.navigate-left</code> to use a chevron.</p>
+                                <script src="https://gist.github.com/gitaeks/6858a252229400231103.js"></script>
+                                <p class="component-note touch-only"><strong>Note:</strong> Table views with the Android theme don't have chevrons to comply with Android Design guidelines. More information can be found <a href="http://developer.android.com/design/patterns/pure-android.html">here</a>.</p>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
 
-                            </artile>
 
-                        </div>
+                            <li class="component">
+                                <a href="#table-views-badges"></a>
+                                <h2 id="table-views-badges" class="page-header">
+                                    Table view with badges
+                                </h2>
+                                <p>Badges are a great way of showing data.</p>
+                                <script src="https://gist.github.com/gitaeks/e976054f3620c6b1acfa.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
+
+                            <li class="component">
+                                <a href="#table-views-badgesChevrons"></a>
+                                <h2 id="table-views-badgesChevrons" class="page-header">
+                                    Table view with badges and chevrons
+                                </h2>
+                                <p>Feel free to use chevrons and badges together. They'll automatically positon themselves correctly.</p>
+                                <script src="https://gist.github.com/gitaeks/349ae86d40b937a09252.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
+
+                            <li class="component">
+                                <a href="#table-views-images"></a>
+                                <h2 id="table-views-images" class="page-header">
+                                    Table view with media (images)
+                                </h2>
+                                <p>Showing media inside table views is easy. This component to perfect for images and text.</p>
+                                <script src="https://gist.github.com/gitaeks/4b85e7868c98ac54d6dd.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
+
+                            <li class="component">
+                                <a href="#table-views-icons"></a>
+                                <h2 id="table-views-icons" class="page-header">
+                                    Table view with media (icons)
+                                </h2>
+                                <p>Ratchicons can also used instead of images.</p>
+                                <script src="https://gist.github.com/gitaeks/5dd07b874a47922bdab7.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
+
+                            <li class="component">
+                                <a href="#table-views-avatars"></a>
+                                <h2 id="table-views-avatars" class="page-header">
+                                    Table view with media (Avatar)
+                                </h2>
+                                <p></p>
+                                <script src="https://gist.github.com/gitaeks/c18361ee68ee7bc134dc.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
+
+                            <li class="component">
+                                <a href="#table-views-buttons"></a>
+                                <h2 id="table-views-buttons" class="page-header">
+                                    Table view with buttons
+                                </h2>
+                                <script src="https://gist.github.com/gitaeks/c75496fe1e5c6342080a.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
+
+                            <li class="component">
+                                <a href="#table-views-toggles"></a>
+                                <h2 id="table-views-toggles" class="page-header">
+                                    Table view with toggles
+                                </h2>
+                                <script src="https://gist.github.com/gitaeks/938cc4312a0b40231292.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
+
+                            <li class="component">
+                                <a href="#table-views-checkbox"></a>
+                                <h2 id="table-views-checkbox" class="page-header">
+                                    Table view with checkbox
+                                </h2>
+                                <script src="https://gist.github.com/gitaeks/f0d31a9ceb13ddf0ce69.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Default navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
+
+                            <li class="component">
+                                <a href="#table-views-carded"></a>
+                                <h2 id="table-views-carded" class="page-header">
+                                    Carded table views
+                                </h2>
+                                <p>Use <code>.card</code> to wrap any content in a padded element.</p>
+                                <script src="https://gist.github.com/gitaeks/f16f39df5b6ebeb8c0f1.js"></script>
+                                <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/navbar/navbar-buttons.html" data-title="Defa ult navbar">
+                                    <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                                </button>
+                            </li>
+
+                            <li class="component">
+                                <a href="#card"></a>
+                                <h1 id="card" class="page-header">
+                                    Card
+                                </h1>
+                                <p class="lead">Use <code>.card</code> to wrap any content in a padded element. A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.</p>
+                            </li>
+                            <li class="component">
+                              <a href="#card-basic"></a>
+                              <h2 id="card-basic" class="page-header">
+                                  Card Basic example
+                              </h2>
+                              <p>Cards require a small amount of markup and classes to provide you with as much control as possible. These classes and markup are flexible though and can typically be remixed and extended with ease. For example, if your card has no flush content like images, feel free to put the <code>.card-block</code> class on the <code>.card</code> element to consolidate your markup.</p>
+                              <script src="https://gist.github.com/gitaeks/78df23fbc709aeda2391.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+                          <li class="component">
+                              <a href="#card-content-types"></a>
+                              <h2 id="card-content-types" class="page-header">
+                                  Card Content types
+                              </h2>
+                              <p>Cards support a wide variety of content, including images, text, list groups, links, and more. Mix and match multiple content types to create the card you need.</p>
+                              <script src="https://gist.github.com/gitaeks/64fa2e8acecd68363f18.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-content-types-2"></a>
+                              <h2 id="card-content-types-2" class="page-header">
+                                Card Content types 2
+                              </h2>
+                              <script src="https://gist.github.com/gitaeks/a0dd145e240f0d978a87.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+                          
+                          <li class="component" >
+                              <a href="#card-content-types-3"></a>
+                              <h2 id="card-content-types-3" class="page-header">
+                                Card Content types 3
+                              </h2>
+                              <script src="https://gist.github.com/gitaeks/115cf390aa6e6540233f.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-content-types-4"></a>
+                              <h2 id="card-content-types-4" class="page-header">
+                                Card Content types 4
+                              </h2>
+                              <script src="https://gist.github.com/gitaeks/c0a779c6971f7b861e84.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-sizing"></a>
+                              <h2 id="card-sizing" class="page-header">
+                                Card sizing
+                              </h2>
+                              <p>Constrain the width of cards via custom CSS, our predefined grid classes, or with custom styles using our grid mixins.</p>
+                              <p>Using custom widths:</p>
+                              <script src="https://gist.github.com/gitaeks/ed19a8bddb55fc8c74f1.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-text-alignment"></a>
+                              <h2 id="card-text-alignment" class="page-header">
+                                Card Text alignment
+                              </h2>
+                              <p>Constrain the width of cards via custom CSS, our predefined grid classes, or with custom styles using our grid mixins.</p>
+                              <script src="https://gist.github.com/gitaeks/6207333bd6fdbbb5cf6a.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-header-and-footer"></a>
+                              <h2 id="card-header-and-footer" class="page-header">
+                                Card Header and footer
+                              </h2>
+                              <p>Add an optional header and/or footer within a card.</p>
+                              <script src="https://gist.github.com/gitaeks/71f11bc5d41578742685.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+                          <li class="component" >
+                              <a href="#card-header-and-footer-2"></a>
+                              <h2 id="card-header-and-footer-2" class="page-header">
+                                Card Header and footer
+                              </h2>
+                              <script src="https://gist.github.com/gitaeks/71f11bc5d41578742685.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-image-caps"></a>
+                              <h2 id="card-image-caps" class="page-header">
+                                Card Image caps
+                              </h2>
+                              <p>Similar to headers and footers, cards include top and bottom image caps.</p>
+                              <script src="https://gist.github.com/gitaeks/7db051b9da8e5f67f04d.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-image-overlays"></a>
+                              <h2 id="card-image-overlays" class="page-header">
+                                Card Image overlays
+                              </h2>
+                              <p>Turn an image into a card background and overlay your card’s text. Depending on the image, you may or may not need <code>.card-inverse</code> (see below).</p>
+                              <script src="https://gist.github.com/gitaeks/b6a83c122ebcf12b9b33.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-inverted-text"></a>
+                              <h2 id="card-inverted-text" class="page-header">
+                                Card Inverted text
+                              </h2>
+                              <p>Cards include a class for quickly toggling the text color. By default, cards use dark text and assume a light background. Add <code>.card-inverse</code> for white text and specify the <code>background-color</code> and <code>border-color</code> to go with it.</p>
+                              <p>You can also use <code>.card-inverse</code> with the contextual backgrounds variants.</p>
+                              <script src="https://gist.github.com/gitaeks/8695bc4120cb5131e990.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-background-variants"></a>
+                              <h2 id="card-background-variants" class="page-header">
+                                Card Background variants
+                              </h2>
+                              <p>Cards include their own variant classes for quickly changing the <code>background-color</code> and <code>border-color</code> of a card. Darker colors require the use of <code>.card-inverse</code>.</p>
+                              <script src="https://gist.github.com/gitaeks/2e262f1f0c0bd35ff2c8.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-groups"></a>
+                              <h2 id="card-groups" class="page-header">
+                                Card Groups
+                              </h2>
+                              <p>Use card groups to render cards as a single, attached element with equal width and height columns. By default, card groups use <code>display: table;</code> and <code>table-layout: fixed;</code> to achieve their uniform sizing. However, enabling <a href="">flexbox mode</a> can switch that to use <code>display: flex;</code> and provide the same effect.</p>
+                              <script src="https://gist.github.com/gitaeks/8695bc4120cb5131e990.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-decks"></a>
+                              <h2 id="card-decks" class="page-header">
+                                Card Decks
+                              </h2>
+                              <p>Need a set of equal width and height cards that aren’t attached to one another? Use card decks. By default, card decks require two wrapping elements: <code>.card-deck-wrapper</code> and a <code>.card-deck</code>. We use table styles for the sizing and the gutters on <code>.card-deck</code>. The <code>.card-deck-wrapper</code> is used to negative margin out the border-spacing on the <code>.card-deck</code>.</p>
+                              <p>Only applies to small devices and above.</p>
+                              <p>ProTip! If you enable <a href="">flexbox mode</a>, you can remove the <code>.card-deck-wrapper</code>.</p>
+                              <script src="https://gist.github.com/gitaeks/5011e8840fe03cabe171.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+
+                          <li class="component" >
+                              <a href="#card-columns"></a>
+                              <h2 id="card-columns" class="page-header">
+                                Card Columns
+                              </h2>
+                              <p>Cards can be organized into Masonry-like columns with just CSS by wrapping them in <code>.card-columns</code>. Only applies to small devices and above.</p>
+                              <p><strong>Heads up!</strong> This is not available in IE9 and below as they have no support for the <code>column-*</code> CSS properties.</p>
+                              <script src="https://gist.github.com/gitaeks/301dda4ed6f6f255650a.js"></script>
+                              <button type="button" class="btn btn-default btn-bs" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-basic.html" data-title="Default navbar">
+                                  <i class="fa fa-mobile fa-lg  fa-rotate-90 fa-fw"></i>  <i class="fa fa-tablet fa-lg"></i>
+                              </button>
+                          </li>
+                        </ul>
 
                         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
@@ -449,6 +704,437 @@
                                         <a class="icon icon-gear pull-right"></a>
                                     </div>
                                 </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views" style="display: none"></a>
+                                    <ul class="table-view">
+                                        <li class="table-view-cell">Item 1</li>
+                                        <li class="table-view-cell table-view-cell">Item 2</li>
+                                        <li class="table-view-divider">Divider</li>
+                                        <li class="table-view-cell">Item 3</li>
+                                    </ul>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-basic" style="display: none"></a>
+                                    <ul class="table-view">
+                                        <li class="table-view-cell">Item 1</li>
+                                        <li class="table-view-cell table-view-cell">Item 2</li>
+                                        <li class="table-view-divider">Divider</li>
+                                        <li class="table-view-cell">Item 3</li>
+                                    </ul>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-chevrons" style="display: none"></a>
+                                    <ul class="table-view">
+                                        <li class="table-view-cell">
+                                            <a class="navigate-right">
+                                                Item 1
+                                            </a>
+                                        </li>
+                                        <li class="table-view-cell">
+                                            <a class="navigate-right">
+                                                Item 2
+                                            </a>
+                                        </li>
+                                        <li class="table-view-cell">
+                                            <a class="navigate-right">
+                                                Item 3
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-badges" style="display: none"></a>
+                                    <ul class="table-view">
+                                        <li class="table-view-cell">Item 1 <span class="badge">4</span></li>
+                                        <li class="table-view-cell">Item 2 <span class="badge">1</span></li>
+                                        <li class="table-view-cell">Item 3 <span class="badge">5</span></li>
+                                    </ul>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-badgesChevrons" style="display: none"></a>
+                                    <ul class="table-view">
+                                        <li class="table-view-cell">
+                                            <a class="navigate-right">
+                                                <span class="badge">5</span>
+                                                Item 1
+                                            </a>
+                                        </li>
+                                        <li class="table-view-cell">
+                                            <a class="navigate-right">
+                                                <span class="badge">5</span>
+                                                Item 2
+                                            </a>
+                                        </li>
+                                        <li class="table-view-cell">
+                                            <a class="navigate-right">
+                                                <span class="badge">5</span>
+                                                Item 3
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-images" style="display: none"></a>
+                                    <ul class="table-view">
+                                      <li class="table-view-cell media">
+                                        <a class="navigate-right">
+                                          <img class="media-object pull-left" src="http://placehold.it/42x42">
+                                          <div class="media-body">
+                                            Item 1
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                                          </div>
+                                        </a>
+                                      </li>
+                                      <li class="table-view-cell media">
+                                        <a class="navigate-right">
+                                          <img class="media-object pull-left" src="http://placehold.it/42x42">
+                                          <div class="media-body">
+                                            Item 1
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                                          </div>
+                                        </a>
+                                      </li>
+                                      <li class="table-view-cell media">
+                                        <a class="navigate-right">
+                                          <img class="media-object pull-left" src="http://placehold.it/42x42">
+                                          <div class="media-body">
+                                            Item 1
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+                                          </div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-icons" style="display: none"></a>
+                                    <ul class="table-view">
+                                      <li class="table-view-cell media">
+                                        <a class="navigate-right">
+                                          <span class="media-object pull-left icon icon-trash"></span>
+                                          <div class="media-body">
+                                            Item 1
+                                          </div>
+                                        </a>
+                                      </li>
+                                      <li class="table-view-cell media">
+                                        <a class="navigate-right">
+                                          <span class="media-object pull-left icon icon-gear"></span>
+                                          <div class="media-body">
+                                            Item 2
+                                          </div>
+                                        </a>
+                                      </li>
+                                      <li class="table-view-cell media">
+                                        <a class="navigate-right">
+                                          <span class="media-object pull-left icon icon-pages"></span>
+                                          <div class="media-body">
+                                            Item 3
+                                          </div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-avatar" style="display: none"></a>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-buttons" style="display: none"></a>
+                                    <ul class="table-view">
+                                      <li class="table-view-cell">Item 1 <button class="btn">Button</button></li>
+                                      <li class="table-view-cell">Item 2 <button class="btn btn-primary">Button</button></li>
+                                      <li class="table-view-cell">Item 3 <button class="btn btn-positive">Button</button></li>
+                                      <li class="table-view-cell">Item 4 <button class="btn btn-negative">Button</button></li>
+                                    </ul>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-toggles" style="display: none"></a>
+                                    <ul class="table-view">
+                                      <li class="table-view-cell">
+                                        Item 1
+                                        <div class="toggle">
+                                          <div class="toggle-handle"></div>
+                                        </div>
+                                      </li>
+                                      <li class="table-view-cell">
+                                        Item 2
+                                        <div class="toggle active">
+                                          <div class="toggle-handle"></div>
+                                        </div>
+                                      </li>
+                                      <li class="table-view-cell">
+                                        Item 3
+                                        <div class="toggle">
+                                          <div class="toggle-handle"></div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-checkbox" style="display: none"></a>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#table-views-carded" style="display: none"></a>
+                                    <div class="card">
+                                      <ul class="table-view">
+                                        <li class="table-view-cell">Item 1</li>
+                                        <li class="table-view-cell">Item 2</li>
+                                        <li class="table-view-cell table-view-divider">Divider</li>
+                                        <li class="table-view-cell">Item 3</li>
+                                        <li class="table-view-cell">Item 4</li>
+                                      </ul>
+                                    </div>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#card-basic" style="display: none"></a>
+                                    <div class="card">
+                                      <img class="card-img-top" data-src="holder.js/100px180/?bg=777" alt="Card image cap">
+                                      <div class="card-block">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Button</a>
+                                      </div>
+                                    </div>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#card-content-types" style="display: none"></a>
+                                    <div class="card">
+                                      <img class="card-img-top" data-src="holder.js/100px180/?bg=777" alt="Card image cap">
+                                      <div class="card-block">
+                                        <h4 class="card-title">Card title</h4>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                      </div>
+                                      <ul class="table-view table-view-flush">
+                                        <li class="table-view-cell">Item 1</li>
+                                        <li class="table-view-cell table-view-cell">Item 2</li>
+                                        <li class="table-view-divider">Divider</li>
+                                        <li class="table-view-cell">Item 3</li>
+                                      </ul>
+                                      <div class="card-block">
+                                        <a href="#" class="card-link">Card link</a>
+                                        <a href="#" class="card-link">Another link</a>
+                                      </div>
+                                    </div>
+                                </li>
+                                <li class="ratchet-body">
+                                    <a href="#card-content-types-2" style="display: none"></a>
+                                    <div class="card">
+                                      <img class="card-img-top" data-src="holder.js/100px180/?bg=777" alt="Card image cap">
+                                      <div class="card-block">
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                      </div>
+                                    </div>
+                                </li>
+                                <li class="ratchet-body">
+                                  <a href="#card-content-types-3" style="display: none"></a>
+                                  <div class="card card-block">
+                                    <h4 class="card-title">Card title</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                  </div>
+                                </li>
+                                <li class="ratchet-body">
+                                  <a href="#card-content-types-4" style="display: none"></a>
+                                  <div class="card">
+                                    <div class="card-block">
+                                      <h4 class="card-title">Card title</h4>
+                                      <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                                    </div>
+                                    <img data-src="holder.js/100px180/?bg=777" alt="Card image">
+                                    <div class="card-block">
+                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                      <a href="#" class="card-link">Card link</a>
+                                      <a href="#" class="card-link">Another link</a>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="ratchet-body">
+                                  <a href="#card-sizing" style="display: none"></a>
+                                  <div class="card card-block" style="width: 18rem;">
+                                    <h3 class="card-title">Special title treatment</h3>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+                                </li>
+                                <li class="ratchet-body">
+                                  <a href="#card-text-alignment" style="display: none"></a>
+                                  <div class="card card-block">
+                                    <h4 class="card-title">Special title treatment</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+
+                                  <div class="card card-block text-xs-center">
+                                    <h4 class="card-title">Special title treatment</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+
+                                  <div class="card card-block text-xs-right">
+                                    <h4 class="card-title">Special title treatment</h4>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+                                </li>
+                                <li class="ratchet-body">
+                                  <a href="#card-header-and-footer" style="display: none"></a>
+                                  <div class="card">
+                                    <div class="card-header">
+                                      Featured
+                                    </div>
+                                    <div class="card-block">
+                                      <h4 class="card-title">Special title treatment</h4>
+                                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <h3 class="card-header">Featured</h3>
+                                    <div class="card-block">
+                                      <h4 class="card-title">Special title treatment</h4>
+                                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="ratchet-body">
+                                  <a href="#card-header-and-footer-2" style="display: none"></a>
+                                  <div class="card">
+                                    <div class="card-header">
+                                      Quote
+                                    </div>
+                                    <div class="card-block">
+                                      <blockquote class="card-blockquote">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                      </blockquote>
+                                    </div>
+                                  </div>
+                                  <div class="card text-xs-center">
+                                    <div class="card-header">
+                                      Featured
+                                    </div>
+                                    <div class="card-block">
+                                      <h4 class="card-title">Special title treatment</h4>
+                                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                    <div class="card-footer text-muted">
+                                      2 days ago
+                                    </div>
+                                  </div>
+                                </li>
+
+                                <li class="ratchet-body">
+                                  <a href="#card-image-caps" style="display: none"></a>
+                                  <div class="card">
+                                    <img class="card-img-top" data-src="holder.js/100px115/?bg=777" alt="Card image cap">
+                                    <div class="card-block">
+                                      <h4 class="card-title">Card title</h4>
+                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                  </div>
+                                  <div class="card">
+                                    <div class="card-block">
+                                      <h4 class="card-title">Card title</h4>
+                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                    <img class="card-img-bottom" data-src="holder.js/100px115/?bg=777" alt="Card image cap">
+                                  </div>
+                                </li>
+
+                                <li class="ratchet-body">
+                                  <a href="#card-image-overlays" style="display: none"></a>
+                                  <div class="card card-inverse">
+                                    <img class="card-img" data-src="holder.js/100px180/?bg=777" alt="Card image">
+                                    <div class="card-img-overlay">
+                                      <h4 class="card-title">Card title</h4>
+                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                  </div>
+                                </li>
+
+                                <li class="ratchet-body">
+                                  <a href="#card-inverted-text" style="display: none"></a>
+                                  <div class="card card-inverse" style="background-color: #333; border-color: #333;">
+                                    <div class="card-block">
+                                      <h3 class="card-title">Special title treatment</h3>
+                                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                      <a href="#" class="btn btn-primary">Button</a>
+                                    </div>
+                                  </div>
+                                </li>
+
+                                <li class="ratchet-body">
+                                  <a href="#card-background-variants" style="display: none"></a>
+                                  <div class="card card-inverse card-primary text-xs-center">
+                                    <div class="card-block">
+                                      <blockquote class="card-blockquote">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                      </blockquote>
+                                    </div>
+                                  </div>
+                                  <div class="card card-inverse card-success text-xs-center">
+                                    <div class="card-block">
+                                      <blockquote class="card-blockquote">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                      </blockquote>
+                                    </div>
+                                  </div>
+                                  <div class="card card-inverse card-info text-xs-center">
+                                    <div class="card-block">
+                                      <blockquote class="card-blockquote">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                      </blockquote>
+                                    </div>
+                                  </div>
+                                  <div class="card card-inverse card-warning text-xs-center">
+                                    <div class="card-block">
+                                      <blockquote class="card-blockquote">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                      </blockquote>
+                                    </div>
+                                  </div>
+                                  <div class="card card-inverse card-danger text-xs-center">
+                                    <div class="card-block">
+                                      <blockquote class="card-blockquote">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                      </blockquote>
+                                    </div>
+                                  </div>
+                                </li>
+
+                                <li class="ratchet-body">
+                                  <a href="#card-groups" style="display: none"></a>
+                                  <div class="content-padded">
+                                    <p>Only applies to small devices and above.</p>
+                                    <button class="btn btn-block" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-columns.html" data-title="">View Tablet Preview</button>
+                                  </div>
+                                </li>
+
+                                <li class="ratchet-body">
+                                  <a href="#card-decks" style="display: none"></a>
+                                  <div class="content-padded">
+                                    <p>Only applies to small devices and above.</p>
+                                    <button class="btn btn-block" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-columns.html" data-title="">View Tablet Preview</button>
+                                  </div>
+                                </li>
+
+                                <li class="ratchet-body">
+                                  <a href="#card-columns" style="display: none"></a>
+                                  <div class="content-padded">
+                                    <p>Only applies to small devices and above.</p>
+                                    <button class="btn btn-block" data-toggle="modal" data-target="#emulator" data-src="/docs/components/card/card-columns.html" data-title="">View Tablet Preview</button>
+                                  </div>
+                                </li>
                             </ul>
 
                         </div>
@@ -484,16 +1170,38 @@
                         <li> 
                             <a href="#table-views">Table views</a> 
                             <ul class="nav"> 
-                                <li><a href="#table-views-basic">Basic example</a></li> 
+                                <li><a href="#table-views-basic">Basic example</a></li>
+                                <li><a href="#table-views-chevrons">Chevrons</a></li>
                                 <li><a href="#table-views-badges">Badges</a></li> 
                                 <li><a href="#table-views-badgesChevrons">Badges and Chevrons</a></li>
                                 <li><a href="#table-views-images">Images</a></li>
                                 <li><a href="#table-views-icons">Icons</a></li> 
-                                <li><a href="#table-views-avatar">Avatar</a></li>
+                                <li><a href="#table-views-avatars">Avatar</a></li>
                                 <li><a href="#table-views-buttons">Buttons</a></li>
                                 <li><a href="#table-views-toggles">Toggles</a></li>
                                 <li><a href="#table-views-checkbox">Checkbox</a></li>
                                 <li><a href="#table-views-carded">Carded</a></li> 
+                            </ul> 
+                        </li>
+                        <li> 
+                            <a href="#card">Card</a> 
+                            <ul class="nav"> 
+                                <li><a href="#card-basic">Basic example</a></li>
+                                <li><a href="#card-content-types">Content types</a></li>
+                                <li><a href="#card-content-types-2">Content types-2</a></li>
+                                <li><a href="#card-content-types-3">Content types-3</a></li>
+                                <li><a href="#card-content-types-4">Content types-4</a></li>
+                                <li><a href="#card-sizing">Sizing</a></li> 
+                                <li><a href="#card-text-alignment">Text alignment</a></li>
+                                <li><a href="#card-header-and-footer">Header and footer</a></li>
+                                <li><a href="#card-header-and-footer-2">Header and footer-2</a></li>
+                                <li><a href="#card-image-caps">Image caps</a></li> 
+                                <li><a href="#card-image-overlays">Image overlays</a></li>
+                                <li><a href="#card-inverted-text">Inverted text</a></li>
+                                <li><a href="#card-background-variants">Background variants</a></li>
+                                <li><a href="#card-groups">Groups</a></li>
+                                <li><a href="#card-decks">Decks</a></li>
+                                <li><a href="#card-columns">Columns</a></li> 
                             </ul> 
                         </li>
                         <li> 
@@ -539,17 +1247,52 @@
                 <li><a href="../getting-started/#examples">Examples</a></li> 
                 <li><a href="../about/">About</a></li> 
             </ul> 
-            <p><a href="http://kimsq.github.io/rc/" target="_blank">Ratchet Plus</a> is a project maintained by <a href="https://github.com/gitaeks" target="_blank">@gitaeks</a> and <a href="https://github.com/kieregh" target="_blank">@kiere</a>  at <a href="http://kimsq.com" target="_blank">Redblock inc.</a>.</p>
+            <p><a href="http://kimsq.github.io/rc/" target="_blank">Ratchet Plus</a> is a project maintained by <a href="https://github.com/gitaeks" target="_blank">@gitaeks</a> and <a href="https://github.com/kieregh" target="_blank">@kiere</a>  at <a href="http://kimsq.com" target="_blank">Redblock inc.</a></p>
 
             <p>Code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p> 
             <p> Based on <a href="http://goratchet.com/">Ratchet</a> and <a href="http://getbootstrap.com/">Bootstrap</a></p> 
         </div> 
     </footer>
 
+
+
+    <!-- Modal -->
+    <div class="modal fade bs-modal" id="emulator" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Device Emulator</h4>
+          </div>
+          <div class="modal-body">
+            <div class="rb-full-overlay mobile">
+                <div id="site-preview" class="rb-full-overlay-main">
+                    <iframe></iframe>
+                </div>
+            </div>
+            <!-- device 전환버튼 -->
+            <div class="btn-group" data-toggle="buttons" id="devices-buttons">
+                <label class="btn btn-default active rb-btn-mobile" title="mobile">
+                  <input type="radio" name="options" id="option3"> <i class="fa fa-mobile fa-3x"></i>
+                </label>
+                <label class="btn btn-default rb-btn-tablet" title="tablet">
+                  <input type="radio" name="options" id="option2"> <i class="fa fa-tablet fa-3x"></i>
+                </label>
+                <label class="btn btn-default rb-btn-desktop" title="desktop">
+                  <input type="radio" name="options" id="option1" checked> <i class="fa fa-desktop fa-3x"></i>
+                </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="/rc/assets/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
     <script src="/rc/assets/js/docs.js"></script>
-
-
+    
 </body>
 </html>

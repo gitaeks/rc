@@ -22,7 +22,7 @@
 
     <script type="text/javascript">window.liveSettings={api_key:"86aee22586d7465790bc844b6b1bd021"}</script>
     <script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
-    
+
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/rc/assets/img/apple-touch-icon-114x114.png">
 
 </head>
@@ -40,19 +40,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html" data-ignore="push">Ratchet Plus</a>
+          <a class="navbar-brand" href="../index.html">Ratchet Plus</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/rc/" data-ignore="push">Home</a></li>
-            <li><a href="/rc/getting-started" data-ignore="push">Getting started</a></li>
-            <li><a href="/rc/css" data-ignore="push">CSS</a></li>
-            <li><a href="/rc/components" data-ignore="push">Components</a></li>
-            <li class="active" data-ignore="push"><a href="/rc/javascript">Javascript</a></li>
-            <li><a href="https://github.com/kimsq/rc" data-ignore="push" target="_blank">GitHub project</a></li>
+            <li><a href="/rc/">Home</a></li>
+            <li><a href="/rc/getting-started">Getting started</a></li>
+            <li><a href="/rc/layout">Layout</a></li>
+            <li class="active"><a href="/rc/content">Content</a></li>
+            <li><a href="/rc/components">Components</a></li>
+            <li><a href="/rc/examples">Examples</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -60,8 +60,8 @@
 
     <div class="bs-docs-header" id="content" tabindex="-1"> 
         <div class="container"> 
-            <h1>JavaScript</h1> 
-            <p class="lead">Bring Ratchet Plus's components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one.</p> 
+            <h1>Content</h1> 
+            <p class="lead">Styles for displaying content with some of the most commonly used HTML elements, including normalization, typography, images, tables, and more</p> 
         </div>
     </div>
 
@@ -72,18 +72,18 @@
 
                 <div class="row">
                     <div class="content-column col-md-7">
+                        <artile class="component">
+                            <h2 id="navbar-default" class="page-header">
+                                <a class="header" href="#navbar-default"></a>Overview
+                            </h2>
+                            <p>Get the lowdown on the key pieces of Ratchet Plus's infrastructure, including our approach to better, faster, stronger mobile web development.</p>
 
 
-                        <div class="docs-section" id="js-overview">
+                        </artile>
 
-                            <h1 class="page-header">
-                                <a class="anchorjs-link " href="#js-overview"></a>Overview
-                            </h1>
-                            <p class="lead">
-                                Toggleable, contextual menu for displaying lists of links. Made interactive with the 
-                                <a href="../javascript/#dropdowns">dropdown JavaScript plugin</a>.
-                            </p>
-                        </div>
+
+
+
 
                     </div>
                     <div class="device-column col-md-5 hidden-xs hidden-sm">
@@ -192,158 +192,121 @@
 
                     <ul class="nav bs-docs-sidenav"> 
                         <li> 
-                            <a href="#js-overview">Overview</a> 
-                            <ul class="nav"> 
-                                <li><a href="#js-individual-compiled">Individual or compiled</a></li> 
-                                <li><a href="#js-data-attrs">Data attributes</a></li> 
-                                <li><a href="#js-programmatic-api">Programmatic API</a></li> 
-                                <li><a href="#js-noconflict">No conflict</a></li> 
-                                <li><a href="#js-events">Events</a></li> 
-                                <li><a href="#js-version-nums">Version numbers</a></li> 
-                                <li><a href="#js-disabled">When JavaScript is disabled</a></li> 
-                                <li><a href="#callout-third-party-libs">Third-party libraries</a></li> 
+                            <a href="#overview">Overview</a> 
+                            <ul class="nav"> <li><a href="#overview-doctype">HTML5 doctype</a></li> 
+                                <li><a href="#overview-mobile">Mobile first</a></li> 
+                                <li><a href="#overview-type-links">Typography and links</a></li> 
                             </ul> 
-                        </li>
-                        <li><a href="#js-transitions">Transitions</a></li>
+                        </li> 
                         <li> 
-                            <a href="#js-modals">Modal</a> 
+                            <a href="#grid">Grid system</a> 
                             <ul class="nav"> 
-                                <li><a href="#modals-examples">Examples</a></li> 
-                                <li><a href="#modals-sizes">Sizes</a></li> 
-                                <li><a href="#modals-remove-animation">Remove animation</a></li> 
-                                <li><a href="#modals-related-target">Varying content based on trigger button</a></li> 
-                                <li><a href="#modals-usage">Usage</a></li> 
-                                <li><a href="#modals-options">Options</a></li> 
-                                <li><a href="#modals-methods">Methods</a></li> 
-                                <li><a href="#modals-events">Events</a></li> 
+                                <li><a href="#grid-intro">Introduction</a></li> 
+                                <li><a href="#grid-media-queries">Media queries</a></li> 
+                                <li><a href="#grid-options">Grid options</a></li> 
+                                <li><a href="#grid-example-basic">Ex: Stacked-to-horizontal</a></li> 
+                                <li><a href="#grid-example-mixed">Ex: Mobile and desktop</a></li> 
+                                <li><a href="#grid-example-mixed-complete">Ex: Mobile, tablet, desktop</a></li> 
+                                <li><a href="#grid-example-wrapping">Ex: Column wrapping</a></li> 
+                                <li><a href="#grid-responsive-resets">Responsive column resets</a></li> 
+                                <li><a href="#grid-offsetting">Offsetting columns</a></li> 
+                                <li><a href="#grid-nesting">Nesting columns</a></li> 
+                                <li><a href="#grid-column-ordering">Column ordering</a></li> 
+                                <li><a href="#grid-less">Less mixins and variables</a></li> 
                             </ul> 
-                        </li>
+                        </li> 
                         <li> 
-                            <a href="#js-popovers">Popover</a> 
+                            <a href="#type">Typography</a> 
                             <ul class="nav"> 
-                                <li><a href="#popovers-examples">Examples</a></li> 
-                                <li><a href="#popovers-usage">Usage</a></li> 
-                                <li><a href="#popovers-methods">Methods</a></li> 
-                                <li><a href="#popovers-events">Events</a></li> 
+                                <li><a href="#type-headings">Headings</a></li> 
+                                <li><a href="#type-body-copy">Body copy</a></li> 
+                                <li><a href="#type-inline-text">Inline text elements</a></li> 
+                                <li><a href="#type-alignment">Alignment classes</a></li> 
+                                <li><a href="#type-transformation">Transformation classes</a></li> 
+                                <li><a href="#type-abbreviations">Abbreviations</a></li> 
+                                <li><a href="#type-addresses">Addresses</a></li> 
+                                <li><a href="#type-blockquotes">Blockquotes</a></li> 
+                                <li><a href="#type-lists">Lists</a></li> 
                             </ul> 
-                        </li>
-                        <li> 
-                            <a href="#js-popups">Popup</a> 
+                        </li> 
+                        <li>
+                            <a href="#code">Code</a> 
                             <ul class="nav"> 
-                                <li><a href="#popovers-examples">Examples</a></li> 
-                                <li><a href="#popovers-usage">Usage</a></li> 
-                                <li><a href="#popovers-methods">Methods</a></li> 
-                                <li><a href="#popovers-events">Events</a></li> 
-                            </ul> 
-                        </li>
-                        <li> 
-                            <a href="#js-pages">Action Page</a> 
-                            <ul class="nav"> 
-                                <li><a href="#popovers-examples">Examples</a></li> 
-                                <li><a href="#popovers-usage">Usage</a></li> 
-                                <li><a href="#popovers-methods">Methods</a></li> 
-                                <li><a href="#popovers-events">Events</a></li> 
+                                <li><a href="#code-inline">Inline</a></li> 
+                                <li><a href="#code-user-input">User input</a></li> 
+                                <li><a href="#code-block">Basic block</a></li> 
+                                <li><a href="#code-variables">Variables</a></li> 
+                                <li><a href="#code-sample-output">Sample output</a></li> 
                             </ul> 
                         </li>
                         <li> 
-                            <a href="#js-sheets">Action Sheet</a> 
+                            <a href="#tables">Tables</a> 
                             <ul class="nav"> 
-                                <li><a href="#popovers-examples">Examples</a></li> 
-                                <li><a href="#popovers-usage">Usage</a></li> 
-                                <li><a href="#popovers-methods">Methods</a></li> 
-                                <li><a href="#popovers-events">Events</a></li> 
+                                <li><a href="#tables-example">Basic example</a></li> 
+                                <li><a href="#tables-striped">Striped rows</a></li> 
+                                <li><a href="#tables-bordered">Bordered table</a></li> 
+                                <li><a href="#tables-hover-rows">Hover rows</a></li> 
+                                <li><a href="#tables-condensed">Condensed table</a></li> 
+                                <li><a href="#tables-contextual-classes">Contextual classes</a></li> 
+                                <li><a href="#tables-responsive">Responsive tables</a></li> 
                             </ul> 
                         </li>
                         <li> 
-                            <a href="#js-tabs">Tab</a> 
+                            <a href="#forms">Forms</a> 
                             <ul class="nav"> 
-                                <li><a href="#dropdowns-example">Example</a></li> 
-                                <li><a href="#dropdowns-alignment">Alignment</a></li> 
-                                <li><a href="#dropdowns-headers">Headers</a></li> 
-                                <li><a href="#dropdowns-divider">Divider</a></li> 
-                                <li><a href="#dropdowns-disabled">Disabled menu items</a></li> 
+                                <li><a href="#forms-example">Basic example</a></li> 
+                                <li><a href="#forms-inline">Inline form</a></li> 
+                                <li><a href="#forms-horizontal">Horizontal form</a></li> 
+                                <li><a href="#forms-controls">Supported controls</a></li> 
+                                <li><a href="#forms-controls-static">Static control</a></li> 
+                                <li><a href="#forms-control-focus">Focus state</a></li> 
+                                <li><a href="#forms-control-disabled">Disabled state</a></li> 
+                                <li><a href="#forms-control-readonly">Readonly state</a></li> 
+                                <li><a href="#forms-help-text">Help text</a></li> 
+                                <li><a href="#forms-control-validation">Validation states</a></li> 
+                                <li><a href="#forms-control-sizes">Control sizing</a></li> 
                             </ul> 
-                        </li>
+                        </li> 
                         <li> 
-                            <a href="#js-dropdowns">Dropdown</a> 
+                            <a href="#buttons">Buttons</a> 
                             <ul class="nav"> 
-                                <li><a href="#dropdowns-example">Example</a></li> 
-                                <li><a href="#dropdowns-alignment">Alignment</a></li> 
-                                <li><a href="#dropdowns-headers">Headers</a></li> 
-                                <li><a href="#dropdowns-divider">Divider</a></li> 
-                                <li><a href="#dropdowns-disabled">Disabled menu items</a></li> 
+                                <li><a href="#buttons-tags">Button tags</a></li> 
+                                <li><a href="#buttons-options">Options</a></li> 
+                                <li><a href="#buttons-sizes">Sizes</a></li> 
+                                <li><a href="#buttons-active">Active state</a></li> 
+                                <li><a href="#buttons-disabled">Disabled state</a></li> 
                             </ul> 
-                        </li>
+                        </li> 
                         <li> 
-                            <a href="#js-drawers">Drawer</a> 
+                            <a href="#images">Images</a> 
                             <ul class="nav"> 
-                                <li><a href="#dropdowns-example">Example</a></li> 
-                                <li><a href="#dropdowns-alignment">Alignment</a></li> 
-                                <li><a href="#dropdowns-headers">Headers</a></li> 
-                                <li><a href="#dropdowns-divider">Divider</a></li> 
-                                <li><a href="#dropdowns-disabled">Disabled menu items</a></li> 
+                                <li><a href="#images-responsive">Responsive images</a></li> 
+                                <li><a href="#images-shapes">Image shapes</a></li> 
                             </ul> 
-                        </li>
+                        </li> 
                         <li> 
-                            <a href="#js-collapse">Collapse</a> 
+                            <a href="#helper-classes">Helper classes</a> 
                             <ul class="nav"> 
-                                <li><a href="#dropdowns-example">Example</a></li> 
-                                <li><a href="#dropdowns-alignment">Alignment</a></li> 
-                                <li><a href="#dropdowns-headers">Headers</a></li> 
-                                <li><a href="#dropdowns-divider">Divider</a></li> 
-                                <li><a href="#dropdowns-disabled">Disabled menu items</a></li> 
+                                <li><a href="#helper-classes-colors">Contextual colors</a></li> 
+                                <li><a href="#helper-classes-backgrounds">Contextual backgrounds</a></li> 
+                                <li><a href="#helper-classes-close">Close icon</a></li> 
+                                <li><a href="#helper-classes-carets">Carets</a></li> 
+                                <li><a href="#helper-classes-floats">Quick floats</a></li> 
+                                <li><a href="#helper-classes-center">Center content blocks</a></li> 
+                                <li><a href="#helper-classes-clearfix">Clearfix</a></li> 
+                                <li><a href="#helper-classes-show-hide">Showing and hiding content</a></li> 
+                                <li><a href="#helper-classes-screen-readers">Screen reader and keyboard navigation content</a></li> 
+                                <li><a href="#helper-classes-image-replacement">Image replacement</a></li> 
                             </ul> 
-                        </li>
+                        </li> 
                         <li> 
-                            <a href="#js-backdrop">Backdrop</a> 
+                            <a href="#responsive-utilities">Responsive utilities</a> 
                             <ul class="nav"> 
-                                <li><a href="#dropdowns-example">Example</a></li> 
-                                <li><a href="#dropdowns-alignment">Alignment</a></li> 
-                                <li><a href="#dropdowns-headers">Headers</a></li> 
-                                <li><a href="#dropdowns-divider">Divider</a></li> 
-                                <li><a href="#dropdowns-disabled">Disabled menu items</a></li> 
+                                <li><a href="#responsive-utilities-classes">Available classes</a></li> 
+                                <li><a href="#responsive-utilities-print">Print classes</a></li> 
+                                <li><a href="#responsive-utilities-tests">Test cases</a></li> 
                             </ul> 
-                        </li>
-                        <li> 
-                            <a href="#js-loading">Loading</a> 
-                            <ul class="nav"> 
-                                <li><a href="#dropdowns-example">Example</a></li> 
-                                <li><a href="#dropdowns-alignment">Alignment</a></li> 
-                                <li><a href="#dropdowns-headers">Headers</a></li> 
-                                <li><a href="#dropdowns-divider">Divider</a></li> 
-                                <li><a href="#dropdowns-disabled">Disabled menu items</a></li> 
-                            </ul> 
-                        </li>
-                        <li> 
-                            <a href="#js-spinner">Spinner</a> 
-                            <ul class="nav"> 
-                                <li><a href="#dropdowns-example">Example</a></li> 
-                                <li><a href="#dropdowns-alignment">Alignment</a></li> 
-                                <li><a href="#dropdowns-headers">Headers</a></li> 
-                                <li><a href="#dropdowns-divider">Divider</a></li> 
-                                <li><a href="#dropdowns-disabled">Disabled menu items</a></li> 
-                            </ul> 
-                        </li>
-                        <li> 
-                            <a href="#js-gestures">Gestures and Events</a> 
-                            <ul class="nav"> 
-                                <li><a href="#dropdowns-example">Example</a></li> 
-                                <li><a href="#dropdowns-alignment">Alignment</a></li> 
-                                <li><a href="#dropdowns-headers">Headers</a></li> 
-                                <li><a href="#dropdowns-divider">Divider</a></li> 
-                                <li><a href="#dropdowns-disabled">Disabled menu items</a></li> 
-                            </ul> 
-                        </li>
-                        <li> 
-                            <a href="#js-tap">Tap & Click</a> 
-                            <ul class="nav"> 
-                                <li><a href="#dropdowns-example">Example</a></li> 
-                                <li><a href="#dropdowns-alignment">Alignment</a></li> 
-                                <li><a href="#dropdowns-headers">Headers</a></li> 
-                                <li><a href="#dropdowns-divider">Divider</a></li> 
-                                <li><a href="#dropdowns-disabled">Disabled menu items</a></li> 
-                            </ul> 
-                        </li>
+                        </li> 
                     </ul> 
                         <a class="back-to-top" href="#top"> Back to top </a> <a href="#" class="bs-docs-theme-toggle" role="button">Disable theme preview</a> 
                 </nav>
@@ -363,7 +326,7 @@
                 <li><a href="../getting-started/#examples">Examples</a></li> 
                 <li><a href="../about/">About</a></li> 
             </ul> 
-            <p><a href="http://kimsq.github.io/rc/" target="_blank">Ratchet Plus</a> is a project maintained by <a href="https://github.com/gitaeks" target="_blank">@gitaeks</a> and <a href="https://github.com/kieregh" target="_blank">@kiere</a>  at <a href="http://kimsq.com" target="_blank">Redblock inc.</a>.</p>
+            <p><a href="http://kimsq.github.io/rc/" target="_blank">Ratchet Plus</a> is a project maintained by <a href="https://github.com/gitaeks" target="_blank">@gitaeks</a> and <a href="https://github.com/kieregh" target="_blank">@kiere</a>  at <a href="http://kimsq.com" target="_blank">Redblock inc.</a></p>
 
             <p>Code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p> 
             <p> Based on <a href="http://goratchet.com/">Ratchet</a> and <a href="http://getbootstrap.com/">Bootstrap</a></p> 
@@ -373,9 +336,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="/rc/assets/js/bootstrap.min.js"></script>
     <script src="/rc/assets/js/docs.js"></script>
-
-    <script src="/rc/dist/js/ratchet.js"></script>
-    <script src="/rc/dist/js/ratchet-plus.js"></script>
 
 </body>
 </html>

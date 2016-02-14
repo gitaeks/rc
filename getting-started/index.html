@@ -15,10 +15,9 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700%7COpen+Sans:400,300">
 
     <link rel="stylesheet" href="/rc/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="/rc/dist/css/ratchet.css">
     <link rel="stylesheet" href="/rc/assets/css/docs.css">
     <link rel="stylesheet" href="/rc/assets/css/pygments-manni.css">
-    
+
     <script type="text/javascript">window.liveSettings={api_key:"86aee22586d7465790bc844b6b1bd021"}</script>
     <script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
 
@@ -48,10 +47,10 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/rc/">Home</a></li>
             <li class="active"><a href="/rc/getting-started">Getting started</a></li>
-            <li><a href="/rc/css">CSS</a></li>
+            <li><a href="/rc/layout">Layout</a></li>
+            <li><a href="/rc/content">Content</a></li>
             <li><a href="/rc/components">Components</a></li>
-            <li><a href="/rc/javascript">Javascript</a></li>
-            <li><a href="https://github.com/kimsq/rc" target="_blank">GitHub project</a></li>
+            <li><a href="/rc/examples">Examples</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -83,31 +82,15 @@
 
                     <p class="lead">Ratchet is downloadable in two forms, within which you'll find the following directories and files, logically grouping common resources and providing both compiled and minified variations.</p>
 
+                    <div class="bs-callout bs-callout-warning" id="jquery-required"> 
+                      <h4>jQuery required</h4> 
+                      <p>Please note that <strong>all JavaScript plugins require jQuery</strong> to be included, as shown in the <a href="#template">starter template</a>. <a href="https://github.com/twbs/bootstrap/blob/v3.3.6/bower.json">Consult our <code>bower.json</code></a> to see which versions of jQuery are supported.</p> 
+                    </div>
+
                     <h3>Precompiled Ratchet</h3>
 
                     <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Ratchet. You'll see something like this:</p>
-
-                    <div class="highlight"><pre><code class="language-bash" data-lang="bash">ratchet/
-├── css/
-│   ├── ratchet.css
-│   ├── ratchet.min.css
-│   ├── ratchet-plus.css
-│   ├── ratchet-plus.min.css
-│   ├── ratchet-theme-android.css
-│   ├── ratchet-theme-android.min.css
-│   ├── ratchet-theme-ios.css
-│   ├── ratchet-theme-ios.min.css
-├── js/
-│   ├── ratchet.js
-│   ├── ratchet.min.js
-│   ├── ratchet-plus.js
-│   └── ratchet-plus.min.js
-└── fonts/
-    ├── ratchicons.eot
-    ├── ratchicons.svg
-    ├── ratchicons.ttf
-    └── ratchicons.woff</code></pre></div>
-
+                    <script src="https://gist.github.com/gitaeks/25fba23faea77503a152.js"></script>
 
                     <p>This is the most basic form of Ratchet: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>ratchet.*</code>), as well as compiled and minified CSS and JS (<code>ratchet.min.*</code>). The Ratchicon fonts are included, as are the Android and iOS platform themes.</p>
 
@@ -135,71 +118,7 @@
                 <div class="docs-section">
                     <h2 id="pageLayout">Basic template</h2>
                     <p class="lead">Use this basic template to get your app started.</p>
-
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Ratchet template page<span class="nt">&lt;/title&gt;</span>
-
-    <span class="c">&lt;!-- Sets initial viewport load and disables zooming  --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"initial-scale=1, maximum-scale=1"</span><span class="nt">&gt;</span>
-
-    <span class="c">&lt;!-- Makes your prototype chrome-less once bookmarked to your phone's home screen --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-capable"</span> <span class="na">content=</span><span class="s">"yes"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-status-bar-style"</span> <span class="na">content=</span><span class="s">"black"</span><span class="nt">&gt;</span>
-
-    <span class="c">&lt;!-- Include the compiled Ratchet CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"ratchet.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"ratchet-plus.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
-
-    <span class=c>&lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;</span>
-    <span class=nt>&lt;script </span><span class=na>src=</span><span class=s>"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"</span><span class=nt>&gt;&lt;/script&gt;</span>
-    
-    <span class="c">&lt;!-- Include the compiled Ratchet JS --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"ratchet.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"ratchet-plus.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-
-    <span class="c">&lt;!-- Make sure all your bars are the first things in your &lt;body&gt; --&gt;</span>
-    <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"bar bar-nav"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>Ratchet<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;/header&gt;</span>
-
-    <span class="c">&lt;!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"content-padded"</span><span class="nt">&gt;</span>Thanks for downloading Ratchet. This is an example HTML page that's linked up to compiled Ratchet CSS and JS, has the proper meta tags and the HTML structure. Need some more help before you start filling this with your own content? Check out some Ratchet resources:<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"push-right"</span> <span class="na">href=</span><span class="s">"http://goratchet.com"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;strong&gt;</span>Ratchet documentation<span class="nt">&lt;/strong&gt;</span>
-            <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"push-right"</span> <span class="na">href=</span><span class="s">"https://github.com/twbs/ratchet/"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;strong&gt;</span>Ratchet on Github<span class="nt">&lt;/strong&gt;</span>
-            <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"push-right"</span> <span class="na">href=</span><span class="s">"https://groups.google.com/forum/#!forum/goratchet"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;strong&gt;</span>Ratchet Google group<span class="nt">&lt;/strong&gt;</span>
-            <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"push-right"</span> <span class="na">href=</span><span class="s">"https://twitter.com/goratchet"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;strong&gt;</span>Ratchet on Twitter<span class="nt">&lt;/strong&gt;</span>
-            <span class="nt">&lt;/a&gt;</span>
-          <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span></code></pre></div>
-
-
+                    <script src="https://gist.github.com/gitaeks/81434a93b6b23ac003a2.js"></script>
                 </div>
   
 
@@ -283,12 +202,12 @@
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title">Ratchet</h4>
+                        <h4 class="panel-title">Ratchet Plus</h4>
                     </div>
                     <div class="panel-body">
                         <p>Compiled and minified CSS, JavaScript, and fonts. No docs or original source files are included.</p>
-                        <a href="https://github.com/twbs/ratchet/releases/download/v2.0.2/ratchet-2.0.2-dist.zip" class="btn btn-block btn-primary" data-ignore="push" onclick="_gaq.push(['_trackEvent', 'Downloads', 'V2.0.2-dist']);">Download Ratchet</a>
-                        <p class="version">Currently v2.0.2</p>
+                        <a href="https://github.com/kimsq/rc/releases/download/v0.5/ratchet-plus-0.5-dist.zip" class="btn btn-block btn-primary" data-ignore="push" onclick="_gaq.push(['_trackEvent', 'Downloads', 'V2.0.2-dist']);">Download Ratchet</a>
+                        <p class="version">Currently v0.5</p>
                     </div>
                 </div>
 
@@ -298,8 +217,18 @@
                         <h4 class="panel-title">Source code</h4>
                     </div>
                     <div class="panel-body">
-                        <p>If you haven't already, download the source code for Ratchet.</p>
-                        <a href="https://github.com/twbs/ratchet/archive/v2.0.2.zip" class="btn btn-block btn-primary" data-ignore="push" onclick="_gaq.push(['_trackEvent', 'Downloads', 'V2.0.2']);">Download source</a>
+                        <p>If you haven't already, download the source code for Ratchet Plus.</p>
+                        <a href="https://github.com/kimsq/rc/archive/v0.5.zip" class="btn btn-block btn-primary" data-ignore="push" onclick="_gaq.push(['_trackEvent', 'Downloads', 'V2.0.2']);">Download source</a>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">GitHub project</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Ratchet Plus is open source. It's hosted, developed, and maintained on GitHub.</p>
+                        <a href="https://github.com/kimsq/rc" class="btn btn-block btn-primary" data-ignore="push" onclick="_gaq.push(['_trackEvent', 'Downloads', 'V2.0.2']);">View the GitHub project</a>
                     </div>
                 </div>
 
@@ -319,7 +248,7 @@
                 <li><a href="../getting-started/#examples">Examples</a></li> 
                 <li><a href="../about/">About</a></li> 
             </ul> 
-            <p><a href="http://kimsq.github.io/rc/" target="_blank">Ratchet Plus</a> is a project maintained by <a href="https://github.com/gitaeks" target="_blank">@gitaeks</a> and <a href="https://github.com/kieregh" target="_blank">@kiere</a>  at <a href="http://kimsq.com" target="_blank">Redblock inc.</a>.</p>
+            <p><a href="http://kimsq.github.io/rc/" target="_blank">Ratchet Plus</a> is a project maintained by <a href="https://github.com/gitaeks" target="_blank">@gitaeks</a> and <a href="https://github.com/kieregh" target="_blank">@kiere</a>  at <a href="http://kimsq.com" target="_blank">Redblock inc.</a></p>
 
             <p>Code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p> 
             <p> Based on <a href="http://goratchet.com/">Ratchet</a> and <a href="http://getbootstrap.com/">Bootstrap</a></p> 
