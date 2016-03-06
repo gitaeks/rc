@@ -113,6 +113,32 @@ var resetHistoryObjet=function(objType,objTarget){
         $(view_list).addClass('rb-hidden');
 }  
 
+// history object (modal,page,popup,popover,bottomsheet....)  오픈/클로즈 시 업데이트 함수 
+var updateHistoryObject=function(object,mod){
+      var historyObj=sessionStorage.getItem('historyObj');
+      historyObj=$.parseJSON(historyObj); // JSON 파싱                    
+      
+      if(mod=='add'){ // object 신규 추가                  
+      
+           historyObj.push(object);
+           sessionStorage.setItem('historyObj',JSON.stringify(historyObj));// historyObj 신규 저장 
+      
+      }else{ // object 삭제 = 닫기 
+      
+            var total=historyObj.length; // object 전체 갯수 
+            if(total>0){
+                  var last_index=total-1; // 마지막 object index
+                  var last_object=historyObj[last_index]; // 마지막 object
+                  var objType=last_object.type; // modal, page, popover, popup,...     
+                  var objTarget=last_object.target; // modal, page, popover..의 id 정보  
+                                    
+                  resetHistoryObjet(objType,objTarget);//historyObj 닫기(원복) 처리 함수 호출   
+                  historyObj.splice(last_index,1); // 마지막 object 삭제하고                         
+                  sessionStorage.setItem('historyObj',JSON.stringify(historyObj)); // sessionStorage 에 다시 저장(삭제된 object 제외)
+            }
+      } 
+}
+
 // 슬라이딩으로 페이지 호출(열기) 함수     
 var loadSlidePage=function(startPage,loadPage,transition){     
     $(loadPage).attr('class','page right'); // 출발 위치 세팅 
