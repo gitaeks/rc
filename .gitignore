@@ -32,3 +32,5 @@ nbproject
 .idea
 node_modules
 _site
+
+ftpsync.settings
